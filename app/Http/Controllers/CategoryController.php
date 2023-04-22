@@ -10,7 +10,16 @@ class CategoryController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+     function __construct()
+   {
+    $this->middleware('permission:ver-category|crear-category|editar-pcategory|borrar-category',['only'=>['index']]);
+    $this->middleware('permission:crear-category',['only'=>['create','store']]);
+    $this->middleware('permission:editar-pcategory',['only'=>['edit','update']]);
+    $this->middleware('permission:borrar-category',['only'=>['destroy']]);
+
+   }
+    
+     public function index()
     {
         $category=Category::all();
         return view('dashboard.category.index',['category'=>$category]);

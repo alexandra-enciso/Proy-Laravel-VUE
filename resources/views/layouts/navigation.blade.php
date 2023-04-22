@@ -33,13 +33,13 @@
 
 
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="url('dashboard/rols')" :active="request()->routeIs('rols')">
+                    <x-nav-link :href="url('roles')" :active="request()->routeIs('roles')">
                         {{ __('Roles') }}
                     </x-nav-link>
                 </div>
 
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="url('dashboard/usuario')" :active="request()->routeIs('usuario')">
+                    <x-nav-link :href="url('usuarios')" :active="request()->routeIs('usuarios')">
                         {{ __('Usuarios') }}
                     </x-nav-link>
                 </div>

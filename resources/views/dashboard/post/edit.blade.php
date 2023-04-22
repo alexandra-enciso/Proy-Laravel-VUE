@@ -1,5 +1,5 @@
 @extends('dashboard.master')
-@section('titulo', 'AgregarPost')
+@section('titulo','AgregarPost')
 @section('contenido')
     @include ('dashboard.partials.validation-error')
 
